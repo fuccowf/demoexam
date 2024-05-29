@@ -41,11 +41,10 @@
 
 Для настройки интерфейса нужно его определение по направлению. Нужно посмотреть его направление и сравнить с mac-адресом. После чего можно говорить о его принадлежности к какому-то соединению.
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/01cec39c-8198-4851-81d6-8c380c18266d)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/c87276f1-7a7f-4dee-bfe1-7022ad23baaa)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/e0d3067b-77fe-4539-928e-e9944d09f8e6)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/ca0d32bd-d562-461b-aa66-b4be15d93457)
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/88ed77e2-14fc-46a1-a745-68656e504cea)
-
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/de0b98c8-60f8-4fb7-9567-d5fb796a3ec4)
 
 Следовательно, в сторону HQ-R  смотрит интерфейс с именем **ens34**.
 
