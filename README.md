@@ -1013,16 +1013,15 @@ FRR - пакет, позволяющий осуществить настройк
 
 Необходимо в настройках сетевого соединения указать ip нашего локального DNS сервера и указываем поисковый домен demo.first. Заходим Меню -> Центр управления -> Расширенная конфигурация сети -> Выбираем настроенное соединение -> Параметры IPv4.
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/e525256f-f678-42f7-be21-acd45f423ce1)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/83b259ab-a35c-470d-a429-2398d6b784a5)
 
 Далее заходим снова в Центр управления -> Центр управления системой -> В разделе Пользователи, выбираем Аутентификация:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/498f7ab5-a7a9-449c-ac4e-e9c2f6babb08)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/a53dee1a-25d5-4747-ae28-55000cf3819e)
 
 Выбираем Домен Active  Directory, вводим домен и рабочую группу, которые мы указывали при настройке сервера. Применяем и указываем пароль Администратора Домена, который мы так же задавали при настройке сервера:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/ff9f4e4d-29d3-44f8-9022-87663bc02e1d)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/699c8af4-dd7f-4602-be2a-e1a64c3358b8)
 
 Мы вошли в домен. Теперь необходимо перезагрузить устройство и при следующем входе войти, используя учетную запись домена, которую мы использовали для входа в домен выше.
 
@@ -1080,19 +1079,13 @@ FRR - пакет, позволяющий осуществить настройк
 
 Открываем приложение через Меню в левом нижнем углу, в поиске пишем ADMC  или пункт Системные -> ADMC. В Computers можно отследить подключенные устройства к домену. В Users администрировать учетные записи внутри домена:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/c947c55d-7e96-478b-aaab-e93477793196)
-
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/2357aa39-e760-4181-a67f-bdfdac25560a)
 
 ## ДОБАВЛЕНИЕ УЧЕТНЫХ ЗАПИСЕЙ ПОЛЬЗОВАТЕЛЕЙ В ДОМЕН
 
 В нашем примере необходимо создать 3 учетные записи: Admin, Branch  admin, Network  admin с паролем P@ssw0rd. В ADMC  нажимаем ПКМ по строке Users, выбираем Создать -> Пользователь:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/49a64cad-f375-4c63-bf14-cd5402cd37e8)
-
-
-
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/140f7d59-d30a-4e63-96ee-83e6ede5c5b1)
 
 ## ДОБАВЛЕНИЕ ГРУПП ПОЛЬЗОВАТЕЛЕЙ В ДОМЕН
 
@@ -1102,11 +1095,7 @@ FRR - пакет, позволяющий осуществить настройк
 
 После создания учетных записей и групп пользователей, во вкладке Users, нажимаем ПКМ по пользователю и нажимаем «Добавить в группу», откроется окно поиска группы, в котором необходимо указать название группы, после чего нажать Добавить справа:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/b636b5a8-9934-497a-8b21-c370659c0556)
-
-
-
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/49746850-120f-434d-ac4c-97ecd33406d6)
 
 ## ФАЙЛОВЫЙ SMB СЕРВЕР НА SAMBA
 
@@ -1438,43 +1427,35 @@ FRR - пакет, позволяющий осуществить настройк
 
 Заходим в браузер, в поисковой строке вводим домен moodle.demo.first, откроется сайт Moodle  с установкой. Выбираем Русский язык и нажимаем Далее:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/07daac69-d3de-45c7-b278-220dd03e5a68)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/b2b4e42c-81e8-49ad-a70c-2c988f986ac1)
 
 Изменяем каталог данных на созданный нами каталог:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/ff0a9827-5ccf-465d-b886-3fb904c4b974)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/02c691e6-63b1-4c2e-ab9b-d3a21e7af0ee)
 
 Выбираем базу данных Усовершенствованный MySQL  и нажимаем Далее:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/9fa93d14-bf62-4fc4-b197-51e20fba4759)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/d0ab26fc-e3e4-4a3e-9e61-5a57c5153293)
 
 Вводим данные для подключения к базе данных, которую мы создавали ранее:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/981c13e4-b09a-4903-b2a5-a53d5ec3fe88)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/788a4d87-2338-4662-85cb-2c65acef470c)
 
 Соглашаемся с условиями, нажимая Продолжить:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/7944d635-f9db-4255-9053-1ac21212ea87)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/87cec79c-7a65-490d-ab1d-646f3455884e)
 
 На этом этапе система Moodle  проверяет настройку Систему: зависимости, подскажет рекомендации по улучшению системы. На этом этапе не должно возникнуть проблем. Если выдает ошибку по каким-либо зависимостям, необходимо проверить установку php-модулей в начале:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/d898d6e8-b3bc-416b-8629-c3c2725133ff)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/58046dbc-c397-4b99-8f6a-045ef9531c17)
 
 На след. странице необходимо создать учетную запись администратора и внизу страницы нажимаем Обновить Профиль:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/53891fa6-a533-4759-a410-861a0646a108)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/e12f0303-1add-431f-8ffa-18e88abd4242)
 
 По заданию необходимо указать в названии сайта Номер места, внизу нажимаем Сохранить изменения:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/36e3088f-0c0a-4416-b7aa-d5bc965e03b3)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/c42f9162-93cf-4884-996d-001d296e1242)
 
 На этом установка LMS  Moodle  на веб-сервер Apache2 окончена.
 
@@ -1482,56 +1463,43 @@ FRR - пакет, позволяющий осуществить настройк
 
 Переходим во вкладку Администрирование:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/b07c56a0-6d57-4255-8087-85370de555f0)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/4279b60a-bf22-4125-a147-827d3d67f81a)
 
 Выбираем Пользователи - выбираем Глобальные группы:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/9997bc8b-7830-41a7-a9e8-1dfea68e4efb)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/36f88111-1d84-4512-a5fb-7b30bac24928)
 
 Нажимаем Добавить глобальную группу:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/f9b483b2-cc7b-4d5c-89ea-23d79e2e8682)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/d76a95c5-f4a9-4553-af65-e6ed1de7526f)
 
 Указываем название группы в соответствии с заданием. Подобным образом создаем остальные группы (Admin,Manager,Team,WS):
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/cb3ed41f-3c52-444b-b7ad-5d6cc78164ef)
-
-
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/55f979d0-fb11-45d5-92ff-d9614b6d6c7d)
 
 ## ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЕЙ В MOODLE
 
 Возвращаемся на вкладку Администрирование. Нажимаем Список пользователей:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/96b2ae3f-332e-4943-901e-a0870cf1270c)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/b1598cf1-07fc-4549-9c1c-3cb355cc0426)
 
 Нажимаем Добавить пользователя:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/0a030006-e2cf-4733-8c36-5e89443847d7)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/1cda98f5-1927-403d-86d5-a8857dca585c)
 
 Указываем данные пользователя и внизу нажимаем создать. Создаем подобным образом несколько учетных записей, в соответствии с заданием:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/b43b5d31-185d-4651-8090-1c7849ce7649)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/46faed99-ae44-4465-87b6-9274168c9e61)
 
 ## ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЕЙ В ГРУППЫ В MOODLE
 
 Во вкладке Глобальные группы, где мы создавали группы, нажимаем на шестеренку напротив нужной группы и выбираем Назначить:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/abaef77d-7798-4fac-b336-307e7bac5382)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/2b89a09d-f328-4139-a0e3-56be08db4df7)
 
 Откроется окно выбранной группы. Слева текущие участники, справа все пользователи. Выбираем справа пользователя, которого необходимо добавить в группу и нажимаем кнопку Добавить по середине:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/ea508fd4-8540-4b92-b453-be40644c8219)
-
-
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/9c66021c-d775-4cf6-bc0d-66f63e1a47e2)
 
 ## УСТАНОВКА И ИСПОЛЬЗОВАНИЕ DOCKER-КОНТЕЙНЕРОВ
 
@@ -1665,8 +1633,7 @@ FRR - пакет, позволяющий осуществить настройк
 
     docker ps
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/99c3696a-486b-47a3-a893-ff96feeee993)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/7645fb5c-2b69-4292-ad46-9f8eb70554f9)
 
 Проверяем созданный том для контейнеров:
 
@@ -1678,43 +1645,37 @@ FRR - пакет, позволяющий осуществить настройк
 
 Переходим в браузер и вводим в поисковую строку [https://mediawiki.demo.first:22080](https://mediawiki.demo.first:22080) или другой порт, который был указан в настройках. Сначала мы выполняем установку и базовую настройку медиа Вики, по итогу, который платформу создаст файл LocalSettings.php со всеми настройками. Нажимаем на set  up  the  wiki.:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/64dd0e12-cef3-46fb-b551-bbbc209ed241)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/a720d3f2-137c-435e-b4fd-ab99672f8b6b)
 
 Выбираем Русский Язык и нажимаем Далее:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/cea52835-09d0-4b10-9e2d-d6295d479d44)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/8468f7a7-91d3-4230-852e-32dc52773687)
 
 Система проверит все зависимости и должна писать зеленым, что можно установить МедиаВики. Нажимаем Далее:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/eb765774-c9e4-4ee1-a920-d9888662f71d)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/a34eb1cc-1d4a-4084-ad71-5efba86ddc0a)
 
 Заполняем данные для подключения к базе данных, которые были прописаны в файле wiki.yml (хост БД - bd, имя БД - mediawiki, имя пользователя - wiki, пароль - P@ssw0rd):
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/855083ba-9161-4a97-b242-1bd7978b263f)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/6ca74e80-1671-487d-be75-e62f3d70a66d)
 
 Нажимаем Далее:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/0162ca00-5cda-4b56-851e-e12910456bdc)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/d85feabb-4c0f-4975-9886-f48f2b883866)
 
 Заполняем данные Админской учетки, отмечаем внизу Хватит, установить вики и нажимаем Далее:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/cea78511-abd2-4ec1-9cb1-70887d891309)
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/ff518afc-934d-48a0-9439-9867af0dcb42)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/6c3cbb67-e725-4012-883d-8ea41ad3d7f2)
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/8d8947a2-0f91-4b71-a74e-1839e9bcce28)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/9404e812-ceac-4a47-b1f0-c0888003b174)
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/9f341fcc-7a3e-409e-a24b-cbd852c210a7)
+![image](https://github.com/fuccowf/demoexam/assets/51357017/21e28fe5-b6fc-4be4-9c13-38819d0d522f)
 
+![image](https://github.com/fuccowf/demoexam/assets/51357017/e6fe166c-6003-4a18-9bd2-11cc0295e26a)
 
 На финальном этапе будет автоматически установлен файл LocalSettings.php, в котором сохранены все базовые настройки:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/323ae986-6ced-4e3d-9201-3969a2ed192f)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/aabf6e33-9040-4e53-a82d-c519b474ebf7)
 
 Если сервер с MediaWiki  не имеет визуального интерфейса и визуальная настройка производилась на другом сервере, то необходимо перекинуть файл на наш сервер. Используем для этого scp.
 
@@ -1766,18 +1727,14 @@ FRR - пакет, позволяющий осуществить настройк
 
     docker ps
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/796920e3-dc54-40fa-a6e5-02c24a88846e)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/093a3f37-7560-4ef6-a734-704f1fa37b0c)
 
 Снова заходим через браузер на МедиаВики. Теперь отобразится заглавная страница и нажимаем Войти.
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/b59a53ef-7030-4f27-8ac1-7ea4c0080efa)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/d513f304-ea2f-473d-80f7-ca4c756f6f34)
 
 Нажимаем Войти, вводим данные:
 
-![image](https://github.com/fuccowf/ObsidianMD/assets/51357017/80ecd8f3-8943-4855-a77e-e4ce5c07410f)
-
+![image](https://github.com/fuccowf/demoexam/assets/51357017/6c6a93cb-7941-4c0f-9da1-26abf393669b)
 
 Установка МедиаВики завершена.
-
