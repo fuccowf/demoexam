@@ -129,3 +129,72 @@
  - ::1/128 - обратная петля (loopback)
  - ff02::1 - все узлы в канале связи
  - ff02::2 - все маршрутизаторы в канале связи
+
+# Практика
+
+Топология
+![Топология сети в Cisco PT](https://i.imgur.com/KvFxAP2.png)
+-
+
+По умолчанию выдаются IPv6 link-local адреса на основе MAC-адреса устройства.
+
+Сетевые настройки:
+
+![ipconfig](https://i.imgur.com/vtqPmPv.png)
+
+-----
+
+Уже на этом этапе, когда хосты соединены между собой только Свичом, можно пропинговать их между собой. 
+
+Пинг с PC1 на PC2:
+
+![ping](https://i.imgur.com/MGFawCU.png)
+
+-----
+
+Настроим роутер. Включаем маршрутизацию пакетов ipv6 командой в режиме конфигурации терминала:
+
+    Router(config)#ipv6 unicast-routing
+    
+Прописываем link-local адрес на интерфейсы Gig0/0 и Gig0/1 и включаем интерфейсы:
+
+    Router(config)#int gig0/0
+    Router(config-if-range)#ipv6 address FE80::1 link-local
+    Router(config-if-range)#no shut
+    Router(config)#int gig0/1
+    Router(config-if-range)#ipv6 address FE80::1 link-local
+    Router(config-if-range)#no shut
+
+> В IPv6 можно указывать как несколько IP-адресов на один интерфейс, так и одинаковые link-local адреса на разные интерфейсы одного устройства.
+
+Пинг до роутера из сегментов не будет проходить, пока не укажем IPv6 Gateway.
+
+![Шлюз по умолчанию](https://i.imgur.com/6yYhOcU.png)
+
+-----
+
+Пинг между PC3 и PC1 или PC2 не пройдет, так как link-local работает только внутри своего сегмента и не маршрутизируется, то есть роутер не сможет отправить пакеты по link-local адресу из одного сегмента в другой.
+
+2 Сегмента сети обозначены красным контуром:
+
+![Сегменты сети](https://i.imgur.com/Q9gnGYV.png)
+
+Необходимо прописать GUA (Global Unicast Address) на интерфейсы роутера. Левый сегмент будет Подсетью A, правый - Подсетью B.
+
+    Router(config-if)#int gig0/0
+    Router(config-if)#ipv6 address 2001:DB8:AAAA:A::1/64
+    Router(config-if)#int gig0/1
+    Router(config-if)#ipv6 address 2001:DB8:AAAA:B::1/64
+
+Настроенный роутер начинает рассылать свои анонсы со всеми необходимыми для настройки сети параметрами, в т.ч. префикс сети, на основе которого, хост получает свой уникальный IPv6 адрес, используя link-local адрес, который в свою очередь использует MAC-адрес.
+
+Автоматическая выдача сетевых настроек по протоколу SLAAC:
+
+![enter image description here](https://i.imgur.com/YvBwHIr.png)
+
+Успешный пинг из разных сегментов:
+
+![enter image description here](https://i.imgur.com/A9E26sh.png)
+
+
+
