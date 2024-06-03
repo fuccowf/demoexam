@@ -1,3 +1,6 @@
+## Модули 3 и 4 взяты у abdurrah1m https://github.com/abdurrah1m
+
+
 - [Базовая информация](#base)
   - [ПРАВА СУПЕРПОЛЬЗОВАТЕЛЯ (ROOT)](#sudo)
   - [ИЗМЕНЕНИЕ ИМЕНИ ХОСТА (hostname)](#change-hostname)
@@ -1949,3 +1952,37 @@ nano /usr/local/sbin/clam_all.sh
 Добавляем автозапуск:
 
     systemctl enable iptables
+
+## Настройка виртуального принтера  CUPS
+
+Настройте виртуальный принтер с помощью CUPS для возможности печати документов из Linux-системы на сервере BR-SRV.  
+
+Установка `cups`:
+```
+apt-get update && apt-get install -y cups
+```
+Установка наиболее популярных драйверов на принтеры:
+```
+apt-get install -y gutenprint-cups
+```
+Добавить в автозагрузку:
+```
+systemctl enable --now cups-browsed.service
+systemctl enable --now cups-lpd.socket
+```
+Установка виртуального принтера:
+```
+apt-get install -y cups-pdf
+```
+Заходим по пути `Система -> Администрирование -> Параметры печати`
+
+![image](https://github.com/abdurrah1m/DEMO2024/assets/148451230/4bd0423a-d72e-4176-94d0-cf3c1cbb33fd)
+
+Проверяем работу виртуального принтера:
+* Создаем текстовый файл
+
+![image](https://github.com/abdurrah1m/DEMO2024/assets/148451230/dc200d97-f066-4839-b6ca-1578fd1cd815)
+
+* Файл -> Напечатать... -> Cups-PDF -> Печать
+
+![image](https://github.com/abdurrah1m/DEMO2024/assets/148451230/80d81182-650d-4b52-87e4-0a9d0df686ef)
