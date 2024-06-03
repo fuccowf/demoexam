@@ -1941,3 +1941,11 @@ nano /usr/local/sbin/clam_all.sh
 Блокируем весь о стальной трафик  идущий с интерфейса ens33 на ens34, то есть со стороны ISP в сторону BR-SRV:
 
     iptables -A FORWARD -i ens33 -o ens34 -j DROP
+
+Сохраняем настройки:
+
+    iptables-save > /etc/sysconfig/iptables
+    
+Добавляем автозапуск:
+
+    systemctl enable iptables
