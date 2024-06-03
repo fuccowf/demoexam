@@ -1901,3 +1901,43 @@ nano /usr/local/sbin/clam_all.sh
 > -  0 0 * * * - указываем время в формате Crontab для выполнения каждый день в полночь
 > - /usr/bin/nice -n 19 - исполььзуется для запуска процессов с низким приоритетом выполения, -n 19 указывает на самый низкий приоритет.
 > - /usr/bin/ionice -c3 - используется для установки класса планирования ввода-ввывода для процесса, где -с3 указывает на класс idle. Это означает, что процесс будет получасть доступ к дисковому вводу-выводу только когда система не занята приоритетными задачами..
+
+## Настройка системы управления трафиком BR-R
+С помощью iptables разрешаем порты:
+
+    iptables -A INPUT -p tcp --dport 53 -j ACCEPT\
+    iptables -A INPUT -p udp --dport 53 -j ACCEPT\
+    iptables -A OUTPUT -p tcp --sport 53 -j ACCEPT\
+	iptables -A OUTPUT -p udp --sport 53 -j ACCEPT\
+	iptables -A INPUT -p tcp --dport 80 -j ACCEPT\
+    iptables -A INPUT -p tcp --dport 80 -j ACCEPT\
+    iptables -A OUTPUT -p tcp --sport 80 -j ACCEPT\
+	iptables -A OUTPUT -p udp --sport 80 -j ACCEPT\
+	iptables -A INPUT -p tcp --dport 443 -j ACCEPT\
+    iptables -A INPUT -p udp --dport 443 -j ACCEPT\
+    iptables -A OUTPUT -p tcp --sport 443 -j ACCEPT\
+	iptables -A OUTPUT -p udp --sport 443 -j ACCEPT\
+	iptables -A INPUT -p tcp --dport 22 -j ACCEPT\
+    iptables -A INPUT -p udp --dport 22 -j ACCEPT\
+    iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT\
+	iptables -A OUTPUT -p udp --sport 22 -j ACCEPT\
+Разрешаем протоколы: 
+
+    iptables -A INPUT -p icpm -j ACCEPT\
+    iptables -A INPUT -p gre -j ACCEPT\
+    iptables -A INPUT -p ospf -j ACCEPT\
+
+Разрешаем службы:
+
+    iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT\
+    iptables -A INPUT -m state --state NEW -m udp -p udp --dport 500 -j ACCEPT\
+    iptables -A INPUT -m state --state NEW -m udp -p udp --dport 4500 -j ACCEPT\
+    iptables -A INPUT -m state --state NEW -m udp -p udp --dport 123 -j ACCEPT\
+    iptables -A OUTPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT\
+    iptables -A OUTPUT -m state --state NEW -m udp -p udp --dport 500 -j ACCEPT\
+    iptables -A OUTPUT -m state --state NEW -m udp -p udp --dport 4500 -j ACCEPT\
+    iptables -A OUTPUT -m state --state NEW -m udp -p udp --dport 123 -j ACCEPT\
+
+Блокируем весь о стальной трафик  идущий с интерфейса ens33 на ens34, то есть со стороны ISP в сторону BR-SRV:
+
+    iptables -A FORWARD -i ens33 -o ens34 -j DROP
