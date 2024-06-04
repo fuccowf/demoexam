@@ -1,5 +1,10 @@
 ## Модули 3 и 4 взяты у abdurrah1m https://github.com/abdurrah1m
 
+![enter image description here](https://i.imgur.com/xVDPrFF.jpeg)
+
+![enter image description here](https://i.imgur.com/axxugaN.jpeg)
+
+![enter image description here](https://i.imgur.com/Ht0Juew.jpeg)
 
 - [Базовая информация](#base)
   - [ПРАВА СУПЕРПОЛЬЗОВАТЕЛЯ (ROOT)](#sudo)
